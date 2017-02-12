@@ -1,4 +1,5 @@
 # COBOL Copybook parser in Python
+
 This is a COBOL Copybook parser in Python featuring the following options:
  - Parse the Copybook into a usable format to use in Python
  - Clean up the Copybook by processing REDEFINES statements and remove unused definitions
@@ -15,7 +16,15 @@ The code uses the pic parser code from [pyCOBOL](http://www.travelingfrontiers.c
 
 This code is licensed under GPLv3.
 
+## Installation
+The easiest way to install `python-cobol` is using `pip`:
+
+```sh
+pip install python-cobol
+```
+
 ## Example output
+
 Below is an example Copybook file before and after being processed.
 
 Before:
@@ -47,9 +56,11 @@ After:
 
 
 ## How to use
+
 You can use it in two ways: inside your own python code or as a stand-alone command-line utility.
 
 ### Command-line
+
 Do a git clone from the repository and inside your brand new python-cobol folder run:
 
 	python cobol.py example.cbl
@@ -77,6 +88,7 @@ The utility allows for some command-line switches to disable some processing ste
 	  --skip-strip-prefix   Skips stripping the prefix from the names.	
 
 ### From within your Python code
+
 The parser can also be called from your Python code. All you need is a list of lines in COBOL Copybook format. See example.py how one would do it:
 
 ```python
