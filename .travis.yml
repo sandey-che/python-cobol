@@ -13,12 +13,8 @@ python:
 
 sudo: required
 
-install:
-  - pip install coveralls
-
 script:
-  - cd test && python ./example.py
-  - coverage run --source=python-cobol setup.py test
+  - cd test && python ./example_test.py
 
 after_success:
   - coveralls
