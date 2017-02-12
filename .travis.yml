@@ -16,5 +16,5 @@ sudo: required
 script:
   - cd test && python ./example_test.py
 
-after_success:
-  - coveralls
+notifications:
+  email: false
