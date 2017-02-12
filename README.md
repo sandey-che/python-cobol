@@ -29,6 +29,7 @@ Below is an example Copybook file before and after being processed.
 
 Before:
 
+```cobol
 	00000 * Example COBOL Copybook file                                     AAAAAAAA
 	00000  01  PAULUS-EXAMPLE-GROUP.                                        AAAAAAAA
 	00000       05  PAULUS-ANOTHER-GROUP OCCURS 0003 TIMES.                 AAAAAAAA
@@ -38,9 +39,11 @@ Before:
 	00000                           PIC S9(3)V99.                           AAAAAAAA
 	00000       05  PAULUS-THIS-IS-ANOTHER-GROUP.                           AAAAAAAA
 	00000           10  PAULUS-YES PIC X(5).                                AAAAAAAA
+```
 
 After:
 
+```cobol
 	         01  EXAMPLE-GROUP.                                                     
 	           05  FIELD-2-1 PIC 9(3).                                              
 	           05  FIELD-3-1-1 PIC S9(3)V99.                                        
@@ -53,7 +56,7 @@ After:
 	           05  FIELD-3-3-2 PIC S9(3)V99.                                        
 	           05  THIS-IS-ANOTHER-GROUP.                                           
 	             10  YES PIC X(5).                                                 
-
+```
 
 ## How to use
 
@@ -63,12 +66,15 @@ You can use it in two ways: inside your own python code or as a stand-alone comm
 
 Do a git clone from the repository and inside your brand new python-cobol folder run:
 
+```sh
 	python cobol.py example.cbl
+```
 
 This will process the redefines, denormalize the file, strip the prefixes and ensure all names are unique. 
 
 The utility allows for some command-line switches to disable some processing steps.
 
+```sh
 	$ python cobol.py --help
 	usage: cobol.py [-h] [--skip-all-processing] [--skip-unique-names]
 	                      [--skip-denormalize] [--skip-strip-prefix]
@@ -86,6 +92,7 @@ The utility allows for some command-line switches to disable some processing ste
 	  --skip-unique-names   Skips making all names unique.
 	  --skip-denormalize    Skips denormalizing the COBOL.
 	  --skip-strip-prefix   Skips stripping the prefix from the names.	
+```
 
 ### From within your Python code
 
