@@ -17,7 +17,7 @@ install:
   - pip install coveralls
 
 script:
-  - python ./test/example.py
+  - cd test && python ./example.py
   - coverage run --source=python-cobol setup.py test
 
 after_success:
