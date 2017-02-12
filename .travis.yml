@@ -1,8 +1,6 @@
 language: python
 
 python:
-  - "2.6"
-  - "2.7"
   - "3.2"
   - "3.3"
   - "3.4"
@@ -19,6 +17,7 @@ install:
   - pip install coveralls
 
 script:
+  - python ./test/example.py
   - coverage run --source=python-cobol setup.py test
 
 after_success:
