@@ -1,5 +1,8 @@
 # COBOL Copybook parser in Python
 
+[![PyPI version](https://badge.fury.io/py/python-cobol.svg)](https://badge.fury.io/py/python-cobol)
+[![Build Status](https://travis-ci.org/royopa/python-cobol.svg?branch=master)](https://travis-ci.org/royopa/python-cobol)
+
 This is a COBOL Copybook parser in Python featuring the following options:
  - Parse the Copybook into a usable format to use in Python
  - Clean up the Copybook by processing REDEFINES statements and remove unused definitions
@@ -19,8 +22,8 @@ This code is licensed under GPLv3.
 ## Installation
 The easiest way to install `python-cobol` is using `pip`:
 
-```sh
-pip install python-cobol
+```shell
+$ pip install python-cobol
 ```
 
 ## Example output
@@ -66,15 +69,15 @@ You can use it in two ways: inside your own python code or as a stand-alone comm
 
 Do a git clone from the repository and inside your brand new python-cobol folder run:
 
-```sh
-	python cobol.py example.cbl
+```shell
+$ python cobol.py example.cbl
 ```
 
 This will process the redefines, denormalize the file, strip the prefixes and ensure all names are unique. 
 
 The utility allows for some command-line switches to disable some processing steps.
 
-```sh
+```shell
 	$ python cobol.py --help
 	usage: cobol.py [-h] [--skip-all-processing] [--skip-unique-names]
 	                      [--skip-denormalize] [--skip-strip-prefix]
