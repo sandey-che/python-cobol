@@ -15,7 +15,7 @@ Because I couldn't find a COBOL Copybook parser that fitted all my needs I wrote
 
 On a day to day basis I use it so that Informatica PowerCenter creates only 1 table of my COBOL data instead multiple.
 
-The code uses the pic parser code from [pyCOBOL](http://www.travelingfrontiers.com/projects/doku.php?id=pycobol).
+The code uses the pic parser code from [pyCOBOL](https://sourceforge.net/projects/pycobol/).
 
 This code is licensed under GPLv3.
 
