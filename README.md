@@ -70,7 +70,7 @@ You can use it in two ways: inside your own python code or as a stand-alone comm
 Do a git clone from the repository and inside your brand new python-cobol folder run:
 
 ```shell
-$ python cobol.py example.cbl
+$ python python_cobol.py example.cbl
 ```
 
 This will process the redefines, denormalize the file, strip the prefixes and ensure all names are unique. 
@@ -102,7 +102,7 @@ The utility allows for some command-line switches to disable some processing ste
 The parser can also be called from your Python code. All you need is a list of lines in COBOL Copybook format. See example.py how one would do it:
 
 ```python
-import cobol
+from python_cobol import python_cobol as cobol
 
 with open("example.cbl",'r') as f:
     for row in cobol.process_cobol(f.readlines()):
