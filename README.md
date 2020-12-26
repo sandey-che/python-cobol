@@ -78,8 +78,8 @@ This will process the redefines, denormalize the file, strip the prefixes and en
 The utility allows for some command-line switches to disable some processing steps.
 
 ```shell
-	$ python cobol.py --help
-	usage: cobol.py [-h] [--skip-all-processing] [--skip-unique-names]
+	$ python python_cobol.py --help
+	usage: python_cobol.py [-h] [--skip-all-processing] [--skip-unique-names]
 	                      [--skip-denormalize] [--skip-strip-prefix]
 	                      filename
 
