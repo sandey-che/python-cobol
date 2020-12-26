@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 import sys
-sys.path.insert(0, './../python-cobol')
+sys.path.insert(0, './../python_cobol')
 
 from python_cobol import python_cobol as cobol
 import unittest
