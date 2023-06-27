@@ -10,6 +10,7 @@ class CobolPatterns:
     row_pattern_indexed_by = r"\s+INDEXED BY\s(?P<indexed_by>\S+)"
     row_pattern_redefines = r"\s+REDEFINES\s(?P<redefines>\S+)"
     row_pattern_pic = r'\s+PIC\s+(?P<pic>\S+)'
+    row_pattern_comp= r'\s+([A-Z][A-Z0-9\-]*)'
     row_pattern_end = r'\.$'
 
     row_pattern = re.compile(row_pattern_base + 
@@ -17,6 +18,7 @@ class CobolPatterns:
                              opt_pattern_format.format(row_pattern_occurs) + 
                              opt_pattern_format.format(row_pattern_indexed_by) + 
                              opt_pattern_format.format(row_pattern_pic) + 
+                             opt_pattern_format.format(row_pattern_comp) +
                              row_pattern_end)
 
     pic_pattern_repeats = re.compile(r'(.)\((\d+)\)')
